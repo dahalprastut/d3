@@ -1,0 +1,169 @@
+[
+	{
+		"id": 1,
+		"name": "Brazil",
+		"title": "Military dictatorship (1964-1985)",
+		"categories": [
+			"Dictatorship",
+			"coup",
+			"Operation Condor",
+			"amnesty law",
+			"reparations law",
+			"truth commission",
+			"memorial sites"
+		],
+		"actors": [
+			"Brazilian state",
+			"Brazilian Armed Forces",
+			"various political parties",
+			"several civil organisations"
+		],
+		"keyEvents": [
+			{
+				"date": "1964",
+				"descriptionOne": "On March 31, during the presidency of Joao Goulart, the armed forces rebel against the government. After the coup d’état, General Humberto Castelo Branco is designated as head of government, and Goulart goes into exile in Uruguay. ",
+				"desciptionTwo": "The military dictatorship deployed a series of measures aiming to thwart political opposition to the regime, which turned into a violent repressive campaign. This repression was also coordinated with other governments of the broader South American region through the Operation Condor"
+			},
+			{
+				"date": "1968",
+				"descriptionOne": "Passeata dos Cem Mil. A mass protest against the dictatorship took place in Rio de Janeiro, with the participation of different sector of Brazilian civil society"
+			},
+			{
+				"date": "1972",
+				"descriptionOne": "The organisation Amnesty International publishes a report containing the names of victims of torture in Brazil. It also identifies some of the state officials responsible."
+			},
+			{
+				"date": "1974",
+				"descriptionOne": "On February 23, student Fernando de Santa Cruz was detained by agents of the state in Rio de Janeiro, then killed and forcibly disappeared"
+			},
+			{
+				"date": "1975",
+				"descriptionOne": "On October 26, journalist Vladimir Herzog was tortured and killed after visiting a police station. His murder provoked shock and reactions throughout Brazilian society."
+			},
+			{
+				"date": "1976",
+				"descriptionOne": "Between January 16 and 17, the metal worker Manoel Fiel Filho is tortured and killed by agents of the dictatorship. "
+			},
+			{
+				"date": "1977",
+				"descriptionOne": "In a courtyard of the Universidad de São Paulo, the lawyer Goffredo Telles Jr. read out the “Carta aos brasileiros”, a text condemning the dictatorship. "
+			},
+			{
+				"date": "1979",
+				"descriptionOne": "Lei da Anistia. The dictatorship government decreed an amnesty law. It was a long-standing demand of Brazilian civil society, intended to benefit citizens that were politically persecuted, though it was approved in the terms defined by the government."
+			},
+			{
+				"date": "1985",
+				"descriptionOne": "The book Brasil: nunca mais was published. It is a report that documents, from judicial sources, cases of human rights violations during the dictatorship. "
+			},
+			{
+				"date": "1985",
+				"descriptionOne": "Tancredo Neves became president through an electoral college, defeating the candidate of the dictatorship’s government. Neves died the same year and José Sarney became president."
+			}
+		],
+		"memoryInitiative": [
+			{
+				"name": "Lei N°9.140 “Lei dos Desaparecidos” (1995)",
+				"description": "a legal instrument that establishes the state’s responsibility in the death of people forcibly disappeared because of their political activities between 1961 and 1988. Also creates the Comissão Especial sobre Mortos e Desaparecidos Políticos. "
+			},
+			{
+				"name": "Lei N°10.559 (2002)",
+				"description": "a legal instrument that creates the Comissão de Anistia and establishes reparation measures for people that were granted political amnesty."
+			},
+			{
+				"name": "Direito à Memória e à Verdade (2007)",
+				"description": "a report produced as a result of the work of the work of the CEMPD, published by the Secretaria Especial dos Dereitos Humanos."
+			},
+			{
+				"name": "Dôssie Ditadura: Mortos e Desaparecidos Políticos no Brasil (1964-1985) (2009)",
+				"description": "the latest report of the investigations on victims of human rights violations carried out by the Comissão de Familiares de Mortos e Desaparecidos Políticos. Different versions of the document have been published since 1979. "
+			},
+			{
+				"name": "Relatório da Comissão Nacional da Verdade (2014)",
+				"description": "a document, published in three volumes, detailing the work of this commission."
+			}
+		],
+		"memoryInitiativeSlug": [
+			{
+				"date": 1995
+			},
+			{
+				"date": 2002
+			},
+			{
+				"date": 2007
+			},
+			{
+				"date": 2009
+			},
+			{
+				"date": 2014
+			}
+		],
+		"sitesOfMemory": [
+			{
+				"name": "Memorial Pessoas Imprescindíveis",
+				"description": "a series of commemorative sites, located in different cities, dedicated to victims of human rights violations during the dictatorship"
+			},
+			{
+				"name": "Memorial da Anistia",
+				"description": "an unfinished project for a commemorative space that was going to be constructed in the city of Belo Horizonte."
+			},
+			{
+				"name": "Caminhos da ditadura em Porto Alegre (2016)",
+				"description": "a map, available online, of sites of state repression and civil resistante to the dictatorship in this city, created by historian Anita Natividade Carneiro."
+			}
+		],
+		"organizations": [
+			{
+				"name": "Comissão de Justiça e Paz (CJE)",
+				"desciption": "an organisation created in 1972 with the aid of catholic Archbishop Paulo Evaristo Arns, which provided support to victims of human rights violations."
+			},
+			{
+				"name": "Movimento Feminino Pela Anistia (MFPA)",
+				"desciption": "a political movement founded in 1975 by Theresinha Zerbini. It installed a demand for amnesty for citizens politically persecuted by the dictatorship. "
+			},
+			{
+				"name": "Comissão Especial sobre Mortos e Desaparecidos Políticos (CEMPD)",
+				"desciption": "an investigative body created in 1995 with the aim of searching for people killed and forcibly disappeared during the dictatorship period, as well as resolving on reparatory demands for the victims’ families."
+			},
+			{
+				"name": "Comissão Nacional da Verdade (CNV)",
+				"desciption": "an official body created in 2011 with the purpose of investigating human rights violations that occurred between September 18, 1946, and October 5, 1985. "
+			}
+		]
+	},
+	{
+		"name": "Ecuador"
+	},
+	{
+		"name": "Colombia"
+	},
+	{
+		"name": "Chile"
+	},
+	{
+		"name": "Uruguay"
+	},
+	{
+		"name": "Argentina"
+	},
+	{
+		"name": "El Salvador"
+	},
+	{
+		"name": "Peru"
+	},
+	{
+		"name": "Bolivia"
+	},
+	{
+		"name": "Venezuela"
+	},
+	{
+		"name": "Panama"
+	},
+	{
+		"name": "Paraguay"
+	}
+]

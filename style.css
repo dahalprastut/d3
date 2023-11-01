@@ -1,0 +1,128 @@
+body {
+	background: linear-gradient(#0a142d, #0a1229);
+	box-sizing: border-box;
+}
+
+/* home page starts */
+
+.home {
+	max-height: 90vh;
+	color: ;
+}
+
+.hovered-state {
+	position: fixed;
+	top: 30%;
+	right: 0%;
+	color: #fff;
+	transform: translate(-30%, 0%);
+	border-radius: 10px;
+	border: 1px solid #fff;
+	padding: 20px;
+	width: 400px;
+}
+
+h3,
+h4 {
+	margin: 0;
+}
+
+h4 {
+	margin-top: 20px;
+}
+.timeline {
+	padding: 30px 0;
+}
+
+.chip span {
+	margin-top: 15px;
+	border-radius: 20px;
+	background-color: red;
+	height: 28px;
+	display: inline-block;
+	line-height: 28px;
+	padding: 0 12px;
+	margin-right: 10px;
+}
+
+.home ol {
+	margin: 0;
+	padding: 0;
+}
+
+.home li {
+	margin: 0;
+	margin-left: 16px;
+	margin-top: 5px;
+}
+
+.home .timeline {
+	display: flex;
+}
+
+.home .time {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+
+	text-align: center;
+}
+
+.home .timeline .line {
+	width: 95%;
+	background-color: red;
+	height: 10px;
+}
+
+.arrow.first {
+	left: -10px;
+	right: auto;
+}
+
+.arrow {
+	position: absolute;
+	right: 0.5px;
+
+	border: solid #0a142d;
+	z-index: 100;
+	border-width: 0 4px 4px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+.left {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+/* ========== home page ends */
+
+/* ========== detail page starts */
+
+/*  =========== detail page ends */
+.detail {
+	color: #fff;
+}
+.center {
+	max-width: 1320px;
+	margin: auto;
+	padding: 0 20px;
+}
+.detail .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.detail .title a {
+	color: #fff;
+	font-size: 16px;
+}
+.detail-info {
+	margin-top: 15px;
+	max-width: 60%;
+}
+.detail-info .chip {
+	margin-top: -10px;
+}
