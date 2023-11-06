@@ -125,6 +125,7 @@ ol {
 /*  =========== detail page ends */
 .detail {
 	color: #fff;
+	padding-bottom: 50px;
 }
 .center {
 	max-width: 1320px;
@@ -132,27 +133,31 @@ ol {
 	padding: 0 20px;
 }
 .detail .title {
-	display: flex;
-	justify-content: space-between;
+	margin-top: 50px;
+	/* display: flex; */
+	/* justify-content: space-between; */
 	align-items: center;
 }
 
 .detail .title a {
 	color: #fff;
-	font-size: 16px;
+	font-size: 22px;
 }
 .detail-info {
 	margin-top: 15px;
 	max-width: 60%;
 }
+.detail-info .text {
+	margin-top: 10px;
+}
 .detail-info .chip {
-	margin-top: -10px;
+	margin-top: 5px;
 }
 
 .parallax {
 	margin-top: 50px;
 	margin-bottom: 50px;
-	background: url("itahariBannerThree.jpg") fixed;
+	/* background-attachment: fixed; */
 	width: 100%;
 	height: 500px;
 }
@@ -268,4 +273,15 @@ ol {
 .detail main .center .right {
 	/* display: flex;
 	justify-content: flex-end; */
+}
+
+.horizontal-timeline .time:nth-child(2) > .line,
+.horizontal-timeline .time:nth-child(4) > .line,
+.horizontal-timeline .time:nth-child(6) > .line,
+.horizontal-timeline .time:nth-child(8) > .line {
+	background-color: #e9c54c;
+}
+
+.home .hovered-state {
+	visibility: hidden;
 }

@@ -1,4 +1,3 @@
-console.log();
 // d3.select("div").style("color", "red").attr("class", "fromjs");
 
 // d3.selectAll();
@@ -180,7 +179,13 @@ function drawMap(world, data) {
 						return d.name;
 					});
 
-				var timeline = d3.select(".timeline");
+				var horizontalTime = document.querySelector(".horizontal-timeline");
+
+				// hoveredHorizontalTimeline = d3.select(".horizontal-timeline");
+				d.details.memoryInitiativeSlug.map((el) => {
+					const timeline = `<div class="time"><strong>${el.date}</strong><div class="line"><div class="arrow first left"></div><div class="arrow left"></div></div></div>`;
+					horizontalTime.insertAdjacentHTML("beforeend", timeline);
+				});
 
 				// d.details.memoryInitiativeSlug.forEach(function (dates) {
 				// 	var timeElement = timeline.append("div").attr("class", "time");
@@ -193,7 +198,7 @@ function drawMap(world, data) {
 				// 		lineElement.append("div").attr("class", "arrow " + arrowClass);
 				// 	});
 				// });
-				d3.select(".details").style("visibility", "visible");
+				d3.select(".hovered-state").style("visibility", "visible");
 			}
 		})
 		.on("mouseleave", function (d) {
@@ -206,10 +211,13 @@ function drawMap(world, data) {
 			d3.select(".chip").html("");
 			d3.select(".outer-li").html("");
 
-			d3.select(".details").style("visibility", "hidden");
+			d3.select(".hovered-state").style("visibility", "hidden");
+			var horizontalTime = document.querySelector(".horizontal-timeline");
+			horizontalTime.innerHTML = "";
 		})
 		.on("click", function (d) {
-			var name = "brazil.html"; // The HTML page you want to load
+			console.log("d");
+			var name = `${d.details.name.toLowerCase()}.html`; // The HTML page you want to load
 			// Construct the URL hash by prepending '#' to the 'name'
 			var fullURL = window.location.origin + "/" + name;
 

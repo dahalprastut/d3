@@ -3,6 +3,8 @@
 		"id": 1,
 		"name": "Brazil",
 		"title": "Military dictatorship (1964-1985)",
+		"parallaxOne": "./images/itahariBannerThree.jpg",
+		"parallaxTwo": "./images/itahariBannerThree.jpg",
 		"categories": [
 			"Dictatorship",
 			"coup",
@@ -118,27 +120,140 @@
 			{
 				"name": "Comissão de Justiça e Paz (CJE)",
 				"slug": "CJE",
-				"desciption": "an organisation created in 1972 with the aid of catholic Archbishop Paulo Evaristo Arns, which provided support to victims of human rights violations."
+				"description": "an organisation created in 1972 with the aid of catholic Archbishop Paulo Evaristo Arns, which provided support to victims of human rights violations."
 			},
 			{
 				"name": "Movimento Feminino Pela Anistia (MFPA)",
 				"slug": "MFPA",
-				"desciption": "a political movement founded in 1975 by Theresinha Zerbini. It installed a demand for amnesty for citizens politically persecuted by the dictatorship. "
+				"description": "a political movement founded in 1975 by Theresinha Zerbini. It installed a demand for amnesty for citizens politically persecuted by the dictatorship. "
 			},
 			{
 				"name": "Comissão Especial sobre Mortos e Desaparecidos Políticos (CEMPD)",
 				"slug": "CEMPD",
-				"desciption": "an investigative body created in 1995 with the aim of searching for people killed and forcibly disappeared during the dictatorship period, as well as resolving on reparatory demands for the victims’ families."
+				"description": "an investigative body created in 1995 with the aim of searching for people killed and forcibly disappeared during the dictatorship period, as well as resolving on reparatory demands for the victims’ families."
 			},
 			{
 				"name": "Comissão Nacional da Verdade (CNV)",
 				"slug": "CNV",
-				"desciption": "an official body created in 2011 with the purpose of investigating human rights violations that occurred between September 18, 1946, and October 5, 1985. "
+				"description": "an official body created in 2011 with the purpose of investigating human rights violations that occurred between September 18, 1946, and October 5, 1985. "
 			}
 		]
 	},
 	{
-		"name": "Ecuador"
+		"id": 2,
+		"name": "Bolivia",
+		"title": "Military dictatorships (1964-1982)",
+		"parallaxOne": "./images/itahariBannerThree.jpg",
+		"parallaxTwo": "./images/itahariBannerThree.jpg",
+		"categories": [
+			"Dictatorship",
+			"coup",
+			"Operation Condor",
+			"reparation law",
+			"indigenous peoples",
+			"truth commission"
+		],
+		"actors": [
+			"Brazilian state",
+			"Brazilian Armed Forces",
+			"various political parties",
+			"several civil organisations"
+		],
+		"keyEvents": [
+			{
+				"date": "1964",
+				"descriptionOne": "On March 31, during the presidency of Joao GoulaA military junta led by general René Barrientos overthrew Víctor Paz Estenssoro and took control of the government."
+			},
+			{
+				"date": "1968",
+				"descriptionOne": "Passeata dos Cem Mil. A mass protest against the dictatorship took place in Rio de Janeiro, with the participation of different sector of Brazilian civil society"
+			},
+			{
+				"date": "1972",
+				"descriptionOne": "The organisation Amnesty International publishes a report containing the names of victims of torture in Brazil. It also identifies some of the state officials responsible."
+			},
+			{
+				"date": "1974",
+				"descriptionOne": "On February 23, student Fernando de Santa Cruz was detained by agents of the state in Rio de Janeiro, then killed and forcibly disappeared"
+			},
+			{
+				"date": "1975",
+				"descriptionOne": "On October 26, journalist Vladimir Herzog was tortured and killed after visiting a police station. His murder provoked shock and reactions throughout Brazilian society."
+			},
+			{
+				"date": "1976",
+				"descriptionOne": "Between January 16 and 17, the metal worker Manoel Fiel Filho is tortured and killed by agents of the dictatorship. "
+			},
+			{
+				"date": "1977",
+				"descriptionOne": "In a courtyard of the Universidad de São Paulo, the lawyer Goffredo Telles Jr. read out the “Carta aos brasileiros”, a text condemning the dictatorship. "
+			},
+			{
+				"date": "1979",
+				"descriptionOne": "Lei da Anistia. The dictatorship government decreed an amnesty law. It was a long-standing demand of Brazilian civil society, intended to benefit citizens that were politically persecuted, though it was approved in the terms defined by the government."
+			},
+			{
+				"date": "1985",
+				"descriptionOne": "The book Brasil: nunca mais was published. It is a report that documents, from judicial sources, cases of human rights violations during the dictatorship. "
+			},
+			{
+				"date": "1985",
+				"descriptionOne": "Tancredo Neves became president through an electoral college, defeating the candidate of the dictatorship’s government. Neves died the same year and José Sarney became president."
+			}
+		],
+		"memoryInitiative": [
+			{
+				"name": "Decretos Supremos 19.241 (1982) y 19.734 (1983)",
+				"description": "a legal instrument that establishes the state’s responsibility in the death of people forcibly disappeared because of their political activities between 1961 and 1988. Also creates the Comissão Especial sobre Mortos e Desaparecidos Políticos. "
+			},
+			{
+				"name": "Lei N°10.559 (2002)",
+				"description": "a legal instrument that creates the Comissão de Anistia and establishes reparation measures for people that were granted political amnesty."
+			},
+			{
+				"name": "Direito à Memória e à Verdade (2007)",
+				"description": "a report produced as a result of the work of the work of the CEMPD, published by the Secretaria Especial dos Dereitos Humanos."
+			}
+		],
+		"memoryInitiativeSlug": [
+			{
+				"date": 1983
+			},
+			{
+				"date": 2004
+			},
+			{
+				"date": 2021
+			}
+		],
+		"sitesOfMemory": [
+			{
+				"name": "Espacio de la Memoria Histórica de las Luchas del Pueblo Boliviano",
+				"description": "a place of remembrance where public events are held, located on Laikakota Hill in La Paz. "
+			}
+		],
+		"organizations": [
+			{
+				"name": "Asamblea permanente de Derechos Humanos de Bolivia",
+				"slug": "APDHB",
+				"description": " an organisation ffounded in 1976 to defend and promote human rights. "
+			},
+			{
+				"name": "Movimento Feminino Pela Anistia (MFPA)",
+				"slug": "MFPA",
+				"description": "a political movement founded in 1975 by Theresinha Zerbini. It installed a demand for amnesty for citizens politically persecuted by the dictatorship. "
+			},
+			{
+				"name": "Comissão Especial sobre Mortos e Desaparecidos Políticos (CEMPD)",
+				"slug": "CEMPD",
+				"description": "an investigative body created in 1995 with the aim of searching for people killed and forcibly disappeared during the dictatorship period, as well as resolving on reparatory demands for the victims’ families."
+			},
+			{
+				"name": "Comissão Nacional da Verdade (CNV)",
+				"slug": "CNV",
+				"description": "an official body created in 2011 with the purpose of investigating human rights violations that occurred between September 18, 1946, and October 5, 1985. "
+			}
+		]
 	},
 	{
 		"name": "Colombia"
