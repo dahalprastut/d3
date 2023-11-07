@@ -172,7 +172,7 @@ function drawMap(world, data) {
 			horizontalTime.innerHTML = "";
 		})
 		.on("click", function (d) {
-			var name = `${d.details.name.split(" ").join("").toLowerCase()}.html`; // The HTML page you want to load
+			var name = `d3/${d.details.name.split(" ").join("").toLowerCase()}.html`; // The HTML page you want to load
 			// Construct the URL hash by prepending '#' to the 'name'
 			var fullURL = window.location.origin + "/" + name;
 

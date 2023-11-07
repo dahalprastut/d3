@@ -1,4 +1,4 @@
-let title = document.URL.split("/")[3].split(".")[0].toLowerCase();
+let title = document.URL.split("/")[4].split(".")[0].toLowerCase();
 
 if (title == "ELSALVADOR") {
 	title = "El Salvador";
