@@ -1,17 +1,23 @@
 console.log("d3", document.URL.split("/")[3].split(".")[0].toUpperCase());
 
-const title = document.URL.split("/")[3].split(".")[0].toLowerCase();
+let title = document.URL.split("/")[3].split(".")[0].toLowerCase();
 
+if (title == "ELSALVADOR") {
+	title = "El Salvador";
+}
+
+console.log("title", title);
 fetch("./data/data.json")
 	.then((res) => res.json())
 	.then((json) => {
-		data = json.find((el) => el.name.toLowerCase() === title);
+		data = json.find((el) => el.name.split(" ").join("").toLowerCase() === title);
 		const name = document.querySelector(".detail-info .name");
 		const text = document.querySelector(".detail-info .text");
 		const chip = document.querySelector(".chip");
 		const verticalTimeline = document.querySelector(".section .center");
 		const tabs = document.querySelector(".tabs");
 		const contentDescription = document.querySelector(".content-description p");
+		const contentHeading = document.querySelector(".content-description h2");
 		const hoveredStateName = document.querySelector(".hovered-state h3");
 		const hoveredStateChip = document.querySelector(".hovered-state .chip");
 		const hoveredSitesOfMemory = document.querySelector(".hovered-state ol .outer-li");
@@ -21,8 +27,8 @@ fetch("./data/data.json")
 		name.innerText = data?.name;
 		text.innerText = data?.title;
 		contentDescription.innerText = data?.organizations[0].description;
+		contentHeading.innerText = data?.organizations[0].name;
 		hoveredStateName.innerText = data?.name;
-		console.log(data?.parallaxOne);
 
 		parallaxOne.style.background = `url(${data?.parallaxOne}) fixed`;
 		parallaxTwo.style.background = `url(${data?.parallaxTwo}) fixed`;
@@ -63,7 +69,9 @@ fetch("./data/data.json")
 
 				const name = e.target.innerText;
 				const text = data.organizations.find((element) => element.slug === name).description;
+				const heading = data.organizations.find((element) => element.slug === name).name;
 				contentDescription.textContent = text;
+				contentHeading.textContent = heading;
 			});
 		});
 

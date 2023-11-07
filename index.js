@@ -1,64 +1,3 @@
-// d3.select("div").style("color", "red").attr("class", "fromjs");
-
-// d3.selectAll();
-
-// d3.select("h1").style("color", "blue");
-
-// const dataset = [200, 240, 300, 321, 222, 130];
-
-// const svgWidth = 500,
-// 	svgHeight = 500,
-// 	barPadding = 5;
-// const barWidth = svgWidth / dataset.length;
-
-// const svg = d3.select("svg").attr("width", svgWidth).attr("height", svgHeight);
-
-// const barChart = svg
-// 	.selectAll("rect")
-// 	.data(dataset)
-// 	.enter()
-// 	.append("rect")
-// 	.attr("y", (d) => svgHeight - d)
-// 	.attr("height", (d) => d)
-// 	.attr("width", barWidth - barPadding)
-// 	.attr("transform", (d, i) => {
-// 		let translate = [barWidth * i, 0];
-// 		return `translate(${translate})`;
-// 	});
-
-// const labels = svg
-// 	.selectAll("text")
-// 	.data(dataset)
-// 	.enter()
-// 	.append("text")
-// 	.text((d) => d)
-// 	.attr("y", (d) => svgHeight - d)
-// 	.attr("fill", "purple")
-// 	.attr("x", (d, i) => barWidth * i);
-
-// const datavalues = [100, 201, 293, 281, 128];
-
-// const svgHeight = 400;
-// const svgWidth = 400;
-// const barPadding = 5;
-// const barWidth = svgWidth / datavalues.length;
-
-// const svg = d3.select("svg").attr("height", svgHeight).attr("width", svgWidth);
-// const barChart = svg
-// 	.selectAll("rect")
-// 	.data(datavalues)
-// 	.enter()
-// 	.append("rect")
-// 	.attr("y", (d) => svgHeight - d)
-// 	.attr("height", (d) => d)
-// 	.attr("width", (d) => barWidth - barPadding)
-// 	.attr("transform", (d, i) => {
-// 		let translate = [barWidth * i, 0];
-// 		return `translate(${translate})`;
-// 	});
-
-// ====================================================================
-
 const memorInitiative = [];
 
 var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
@@ -89,6 +28,26 @@ d3.queue()
 	});
 
 function drawMap(world, data) {
+	// inputs
+	const hoveredInput = document.querySelector(".search .hovered-input");
+	const input = document.querySelector(".search input");
+	input.addEventListener("input", () => {
+		hoveredInput.innerHTML = "";
+		const names = data.filter((el) => el.name.toLowerCase().includes(input.value.toLowerCase()));
+		if (names.length >= 1 && input.value.length > 0) {
+			hoveredInput.style.display = "block";
+			input.style.borderRadius = "20px 20px 0 0";
+		} else {
+			hoveredInput.style.display = "none";
+			input.style.borderRadius = "20px";
+		}
+
+		names.map((el) => {
+			text = `<li><a href="${el.name.toLowerCase()}.html">${el.name}</a></li>`;
+			hoveredInput.insertAdjacentHTML("beforeend", text);
+		});
+	});
+
 	// geoMercator projection
 	var projection = d3
 		.geoMercator() //d3.geoOrthographic()
@@ -170,34 +129,31 @@ function drawMap(world, data) {
 					});
 
 				var outerLi = d3.select(".outer-li");
-				var li = outerLi
-					.selectAll("li")
-					.data(d.details.sitesOfMemory)
-					.enter()
-					.append("li")
-					.text((d) => {
-						return d.name;
-					});
+				if (d.details.sitesOfMemory.length > 0) {
+					var li = outerLi
+						.selectAll("li")
+						.data(d.details.sitesOfMemory)
+						.enter()
+						.append("li")
+						.text((d) => {
+							return d.name;
+						});
+				} else {
+					outerLi._groups[0][0].insertAdjacentHTML("beforeend", "No information provided");
+				}
 
 				var horizontalTime = document.querySelector(".horizontal-timeline");
 
 				// hoveredHorizontalTimeline = d3.select(".horizontal-timeline");
-				d.details.memoryInitiativeSlug.map((el) => {
-					const timeline = `<div class="time"><strong>${el.date}</strong><div class="line"><div class="arrow first left"></div><div class="arrow left"></div></div></div>`;
-					horizontalTime.insertAdjacentHTML("beforeend", timeline);
-				});
+				if (d.details.memoryInitiative.length > 0) {
+					d.details.memoryInitiativeSlug.map((el) => {
+						const timeline = `<div class="time"><strong>${el.date}</strong><div class="line"><div class="arrow first left"></div><div class="arrow left"></div></div></div>`;
+						horizontalTime.insertAdjacentHTML("beforeend", timeline);
+					});
+				} else {
+					horizontalTime.insertAdjacentHTML("beforeend", "No information provided");
+				}
 
-				// d.details.memoryInitiativeSlug.forEach(function (dates) {
-				// 	var timeElement = timeline.append("div").attr("class", "time");
-
-				// 	timeElement.append("strong").text(dates.year);
-
-				// 	var lineElement = timeElement.append("div").attr("class", "line");
-
-				// 	dates.arrows.forEach(function (arrowClass) {
-				// 		lineElement.append("div").attr("class", "arrow " + arrowClass);
-				// 	});
-				// });
 				d3.select(".hovered-state").style("visibility", "visible");
 			}
 		})
@@ -216,8 +172,7 @@ function drawMap(world, data) {
 			horizontalTime.innerHTML = "";
 		})
 		.on("click", function (d) {
-			console.log("d");
-			var name = `${d.details.name.toLowerCase()}.html`; // The HTML page you want to load
+			var name = `${d.details.name.split(" ").join("").toLowerCase()}.html`; // The HTML page you want to load
 			// Construct the URL hash by prepending '#' to the 'name'
 			var fullURL = window.location.origin + "/" + name;
 
@@ -228,79 +183,3 @@ function drawMap(world, data) {
 			d3.event.preventDefault();
 		});
 }
-// ==========================================================
-
-// const width = 975;
-// const height = 610;
-
-// const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", zoomed);
-
-// const svg = d3
-// 	.create("svg")
-// 	.attr("viewBox", [0, 0, width, height])
-// 	.attr("width", width)
-// 	.attr("height", height)
-// 	.attr("style", "max-width: 100%; height: auto;")
-// 	.on("click", reset);
-
-// const path = d3.geoPath();
-
-// const g = svg.append("g");
-// function zoomed(event) {
-// 	const { transform } = event;
-// 	g.attr("transform", transform);
-// 	g.attr("stroke-width", 1 / transform.k);
-// }
-// function reset() {
-// 	states.transition().style("fill", null);
-// 	svg.transition()
-// 		.duration(750)
-// 		.call(zoom.transform, d3.zoomIdentity, d3.zoomTransform(svg.node()).invert([width / 2, height / 2]));
-// }
-
-// d3.json("/data/america.json", function (error, us) {
-// 	if (error) {
-// 		console.error("Error loading data:", error);
-// 		return;
-// 	}
-// 	const states = g
-// 		.append("g")
-// 		.attr("fill", "#444")
-// 		.attr("cursor", "pointer")
-// 		.selectAll("path")
-// 		.data(topojson.feature(us, us.objects.countries).features)
-// 		.enter()
-// 		.append("path")
-// 		.on("click", clicked)
-// 		.attr("d", path);
-// 	states.append("title").text((d) => d.properties.name);
-
-// 	g.append("path")
-// 		.attr("fill", "none")
-// 		.attr("stroke", "white")
-// 		.attr("stroke-linejoin", "round")
-// 		.attr("d", path(topojson.mesh(us, us.objects.countries, (a, b) => a !== b)));
-
-// 	svg.call(zoom);
-
-// 	function clicked(event, d) {
-// 		const [[x0, y0], [x1, y1]] = path.bounds(d);
-// 		event.stopPropagation();
-// 		states.transition().style("fill", null);
-// 		d3.select(this).transition().style("fill", "red");
-// 		svg.transition()
-// 			.duration(750)
-// 			.call(
-// 				zoom.transform,
-// 				d3.zoomIdentity
-// 					.translate(width / 2, height / 2)
-// 					.scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
-// 					.translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
-// 				d3.pointer(event, svg.node())
-// 			);
-// 	}
-// });
-
-// document.getElementById("map-container").appendChild(svg.node());
-
-// return svg.node();
