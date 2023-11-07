@@ -1,12 +1,9 @@
-console.log("d3", document.URL.split("/")[3].split(".")[0].toUpperCase());
-
 let title = document.URL.split("/")[3].split(".")[0].toLowerCase();
 
 if (title == "ELSALVADOR") {
 	title = "El Salvador";
 }
 
-console.log("title", title);
 fetch("./data/data.json")
 	.then((res) => res.json())
 	.then((json) => {
