@@ -509,7 +509,7 @@
 			},
 			{
 				"name": "Mesa memoria histórica y archivos de la represión",
-				"slug": "Mesa memoria histórica y archivos de la represión",
+				"slug": "MMHAR",
 				"description": "A body that brings together various organizations of victims of the dictatorship and their families."
 			},
 			{
@@ -785,22 +785,27 @@
 		"organizations": [
 			{
 				"name": "Servicio Paz y Justicia Uruguay (SERPAJ)",
+				"slug": "SERPAJ",
 				"description": "A non-governmental organization active since 1981, assisting relatives of disappeared prisoners and organizing demonstrations against the dictatorship. Regularly publishes reports on the human rights situation."
 			},
 			{
 				"name": "Madres y familiares de uruguayos detenidos desaparecidos",
+				"slug": "MFUDD",
 				"description": "Organization consolidated in 1983, bringing together relatives of disappeared prisoners."
 			},
 			{
 				"name": "Institución de Estudios Sociales y Legales del Uruguay (IELSUR)",
+				"slug": "IELSUR",
 				"description": "A non-governmental organization that has been carrying out legal actions in defense of human rights since 1984."
 			},
 			{
 				"name": "Comisión Investigadora sobre la situación de Personas Desaparecidas y Hechos que la Motivaron",
+				"slug": "CISPDM",
 				"description": "An official body created in 1985 to investigate allegations of disappearances that occurred between 1973 and 1978. Its findings were published in a report."
 			},
 			{
 				"name": "Comisión por la Paz",
+				"slug": "CPP",
 				"description": "Body created in 2000 to investigate the disappearances that took place during the dictatorship. In the work of the Commission, the State takes on the work of remembrance as an official task."
 			}
 		],
@@ -812,8 +817,8 @@
 		"id": 7,
 		"name": "Argentina",
 		"title": "Dictatorship (1976-1983)",
-		"parallaxOne": "./images/argentina1.webp",
-		"parallaxTwo": "./images/argentina2.webp",
+		"parallaxOne": "./images/argentina1.png",
+		"parallaxTwo": "./images/argentina2.jpeg",
 		"categories": [
 			"Dictatorship",
 			"Coup",
